@@ -1,0 +1,26 @@
+{
+  "name": "sham-ui-jest-preprocessor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sham-ui/sham-ui-jest-preprocessor.git"
+  },
+  "keywords": [
+    "sham-ui"
+  ],
+  "author": "Eugene Burnashov <shamcode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sham-ui/sham-ui-jest-preprocessor/issues"
+  },
+  "homepage": "https://github.com/sham-ui/sham-ui-jest-preprocessor#readme",
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "sham-ui-templates": "0.0.13"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

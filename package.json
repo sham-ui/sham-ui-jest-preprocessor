@@ -1,6 +1,6 @@
 {
   "name": "sham-ui-jest-preprocessor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/sham-ui/sham-ui-jest-preprocessor#readme",
   "devDependencies": {
-    "babel-jest": "^21.2.0",
+    "babel-jest": "^21.2.0"
+  },
+  "dependencies": {
     "sham-ui-templates": "0.0.13"
   },
   "scripts": {

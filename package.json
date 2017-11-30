@@ -1,6 +1,6 @@
 {
   "name": "sham-ui-jest-preprocessor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,7 @@
     "babel-jest": "^21.2.0"
   },
   "dependencies": {
-    "sham-ui-templates": "0.0.13"
+    "sham-ui-templates": "0.0.14"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -846,10 +846,10 @@ set-value@^2.0.0:
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
 
-sham-ui-templates@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/sham-ui-templates/-/sham-ui-templates-2.1.0.tgz#e18017e80cacffa01dccd3a949fc07682ca09687"
-  integrity sha512-bYUCUvBFrv+21WbiAJ8KhKSuC1in+xdIKLyart+YXAHWqcVXrpuGa7gX0Xm8evXj7eE0zZ0n5NZCEkBKRkRkQA==
+sham-ui-templates@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/sham-ui-templates/-/sham-ui-templates-2.1.1.tgz#51baca5aae1bed40ea6db4458e8edf84f12c1c11"
+  integrity sha512-21ju3vXyHTXP0pHyXgH4PVq9RS34S1SqMfOUugIgYrJW+8DzGge+EMCrgQNm3oqKhuFS2G0LeszU2Xj/FUO9kA==
   dependencies:
     "@babel/runtime" "^7.1.5"
     asciitree "^1.0.2"

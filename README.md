@@ -10,6 +10,7 @@ npm install sham-ui-jest-preprocessor -D
 "jest": {
     "transform": {
         "^.+\\.sht$": "sham-ui-jest-preprocessor",
+        "^.+\\.sfc": "sham-ui-jest-preprocessor",
         "^.+\\.js$": "babel-jest"
     },
 }

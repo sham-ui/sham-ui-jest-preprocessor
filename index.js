@@ -3,7 +3,7 @@ const { SourceNode, SourceMapGenerator, SourceMapConsumer } = require( 'source-m
 const Compiler = require( 'sham-ui-templates' ).Compiler;
 
 const asModuleCompiler = new Compiler( { asModule: true } );
-const singleFileWidgetCompiler = new Compiler( { asModule: false, asSingleFileWidget: true } );
+const singleFileComponentCompiler = new Compiler( { asModule: false, asSingleFileComponent: true } );
 
 function getScriptCode( source ) {
     return source.match(
@@ -15,7 +15,7 @@ function findLine( content, chunk ) {
     return content.substr( 0, content.indexOf( chunk ) ).split( '\n' ).length
 }
 
-function convertMapForSFW( src, filename, afterCompileCode, jestResult ) {
+function convertMapForSFC( src, filename, afterCompileCode, jestResult ) {
     const scriptText = getScriptCode( src );
     const scriptLine = findLine( src, scriptText );
     const scriptLineAfterCompile = findLine( afterCompileCode, scriptText );
@@ -51,24 +51,24 @@ function convertMapForSFW( src, filename, afterCompileCode, jestResult ) {
 module.exports = {
     process( src, filename, config, transformOptions ) {
         try {
-            const isSingleFileWidget = filename.endsWith( '.sfw' );
-            const compiler = isSingleFileWidget ?
-                singleFileWidgetCompiler :
+            const isSingleFileComponent = filename.endsWith( '.sfc' );
+            const compiler = isSingleFileComponent ?
+                singleFileComponentCompiler :
                 asModuleCompiler;
-            const widgetNode = new SourceNode( null, null, null, '' );
-            widgetNode.add( [
+            const componentNode = new SourceNode( null, null, null, '' );
+            componentNode.add( [
                 'require(\'sham-ui\');\n',
                 compiler.compile( filename, src )
             ] );
-            const afterCompileCode = widgetNode.toString();
+            const afterCompileCode = componentNode.toString();
             const jestResult = jestTransformer.process(
                 afterCompileCode,
                 filename,
                 config,
                 { ...transformOptions, instrument: false }
             );
-            if ( isSingleFileWidget ) {
-                return convertMapForSFW( src, filename, afterCompileCode, jestResult );
+            if ( isSingleFileComponent ) {
+                return convertMapForSFC( src, filename, afterCompileCode, jestResult );
             }
             return jestResult;
         } catch ( error ) {

@@ -2,8 +2,15 @@ const jestTransformer = require( 'babel-jest' );
 const { SourceNode, SourceMapGenerator, SourceMapConsumer } = require( 'source-map' );
 const Compiler = require( 'sham-ui-templates' ).Compiler;
 
-const asModuleCompiler = new Compiler( { asModule: true } );
-const singleFileComponentCompiler = new Compiler( { asModule: false, asSingleFileComponent: true } );
+const asModuleCompiler = new Compiler( {
+    asModule: true,
+    removeDataTest: false
+} );
+const singleFileComponentCompiler = new Compiler( {
+    asModule: false,
+    asSingleFileComponent: true,
+    removeDataTest: false
+} );
 
 function getScriptCode( source ) {
     return source.match(

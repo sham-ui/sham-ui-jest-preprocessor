@@ -836,10 +836,10 @@ set-value@^2.0.0:
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
 
-sham-ui-templates@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/sham-ui-templates/-/sham-ui-templates-4.0.2.tgz#4507c210d20c4024d07cc5cf54f4e95f52d13262"
-  integrity sha512-N+Ww/DebJ8Z8djI1BCbBH8n1BZZ5pIsuZ43fF5/UEc1Q6sO7o6mEGqcqx3W2klwoNXAxQubV2vPW64yyOJSt4A==
+sham-ui-templates@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/sham-ui-templates/-/sham-ui-templates-4.1.0.tgz#67924541bb18bfc2b01c295c001aff3cde6fdc5d"
+  integrity sha512-NYdX3ftb0L852ZzoGvhAjuDQ0reFzvuWiorEvhWWcmsoSrQ158xh1UlpF4GZMEAxk/IBRfjLS6TgQRHFMaujWQ==
   dependencies:
     asciitree "^1.0.2"
     sham-ui "4.0.1"

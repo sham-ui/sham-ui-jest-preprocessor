@@ -64,7 +64,6 @@ module.exports = {
                 asModuleCompiler;
             const componentNode = new SourceNode( null, null, null, '' );
             componentNode.add( [
-                'require(\'sham-ui\');\n',
                 compiler.compile( filename, src )
             ] );
             const afterCompileCode = componentNode.toString();

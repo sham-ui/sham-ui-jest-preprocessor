@@ -1,0 +1,15 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: sham-ui-templates
+    versions:
+    - 4.2.2
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
